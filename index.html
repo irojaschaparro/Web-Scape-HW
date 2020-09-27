@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trip to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Take a trip to Mars!!!</h1>
+      <p>Mars the planet that never sleeps!</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    <h2>The Featured Mars Image of the Day!</h2>
+    <img src="{{marsdata['Featured_Image']}}" alt="Featured Image">
+    <h2>Important Mars Table Data</h2>
+    <div> {{marsdata.Table | safe}} </div>
+    <h2>The Daily Header and Description</h2>
+    <h3>News_Header: {{ marsdata.News_Header }}</h3>
+    <h3>News_Description: {{ marsdata.News_Description }}</h3>
+    <img src="{{marsdata['Links_and_Images']['Cerberus Hemisphere Enhanced']}}" alt="Featured Image">
+      <h2>Cerberus Hemisphere</h2>
+    <img src="{{marsdata['Links_and_Images']['Schiaparelli Hemisphere Enhanced']}}" alt="Featured Image">
+      <h2>Schiaparelli Hemisphere</h2>
+    <img src="{{marsdata['Links_and_Images']['Syrtis Major Hemisphere Enhanced']}}" alt="Featured Image">
+      <h2>Syrtis Major Hemisphere</h2>
+    <img src="{{marsdata['Links_and_Images']['Valles Marineris Hemisphere Enhanced']}}" alt="Featured Image">
+      <h2>Valles Marineris Hemisphere</h2>
+  </div>
+  </div>
+</body>
+
+</html>
